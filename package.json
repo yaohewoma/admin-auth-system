@@ -1,0 +1,47 @@
+{
+  "name": "admin-auth-system",
+  "version": "1.0.0",
+  "description": "Express.js backend authentication system with JWT, RBAC, rate limiting, and audit logging",
+  "type": "module",
+  "main": "examples/basic-auth-server.js",
+  "scripts": {
+    "start": "node examples/basic-auth-server.js",
+    "dev": "node --watch examples/basic-auth-server.js",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --passWithNoTests",
+    "test:watch": "npm test -- --watch",
+    "lint": "eslint references/ examples/ --ext .js",
+    "generate-secret": "node -e \"console.log(require('crypto').randomBytes(64).toString('hex'))\""
+  },
+  "keywords": [
+    "authentication",
+    "jwt",
+    "rbac",
+    "express",
+    "rate-limit",
+    "bcrypt",
+    "audit-log",
+    "admin-panel",
+    "trae-skill",
+    "solo-coding-challenge"
+  ],
+  "author": "yaohewoma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yaohewoma/admin-auth-system"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.57.0"
+  }
+}
